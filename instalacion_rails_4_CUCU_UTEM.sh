@@ -12,6 +12,10 @@ echo -e "\t#########################"
 echo -e "\n"
 
 echo -e "[+] Iniciando instalación."
+# Ejecutando update
+echo -e "[+] Ejecutando update"
+sudo apt-get update
+
 # Ejecutando instalación de Ruby version 1.9.3
 echo -e "[+] Instalando Ruby 1.9.3.\n"
 sudo apt-get install ruby1.9.3
