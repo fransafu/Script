@@ -32,23 +32,29 @@ sudo apt-get install nodejs
 # Ejecutando ciclo while para instalación de librerias
 while [ true ]; do
 	echo -e "Aquí debe elegir el motor de base de datos que utilizará : "
-	echo -e "1) Sqlite."
-	echo -e "2) Mysql."
-	echo -e "3) Psql."
+	echo -e " 1) Sqlite."
+	echo -e " 2) Mysql."
+	echo -e " 3) Psql."
 	echo -e "Ingrese una opción: "
 	read opcion
 
 	if [ $opcion = 1 ]; then
+		echo -e "[+] Instalando sqlite3"
+		sudo apt-get install sqlite3
 		echo -e "[+] Instalando libsqlite3-dev."
 		sudo apt-get install libsqlite3-dev
 		break
 	else
 		if [ $opcion = 2 ]; then
+			echo -e "[+] Instalando mysql-server"
+			sudo apt-get install mysql-server
 			echo -e "[+] Instalando libmysqld-dev."
 			sudo apt-get install libmysqld-dev
 			break
 		else
 			if [ $opcion = 3 ]; then
+				echo -e "[+] Instalando postgresql"
+				sudo apt-get install postgresql
 				echo -e "[+] Instalando libpq-dev."
 				sudo apt-get install libpq-dev
 				break
